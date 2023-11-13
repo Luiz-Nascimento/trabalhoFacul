@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Noticias sobre tecnologia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        /* Estilo para o botão de rolagem */
+        .scroll-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        .scroll-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <div class="about-header">
+                <p>Seu site de informações do mundo tech!</p>
+            </div>
+            <div class="wrapper-header">
+                <div class="logo">
+                    <h2><span>Tech</span> News</h2>
+                </div>
+                <div class="banner-ads">
+                    <h2><span style="font-size: 23px;">Tech News</span><br> <a style="text-decoration: none; color: white;"
+                            href="anuncio.html">Insira um anúncio aqui </a></h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--fim header-->
+
+    <div class="center">
+        <div class="menu-main">
+            <a href="index.html">Home</a>
+            <a href="#">Noticias</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </div>
+
+    </div>
+    <section class="noticias-1">
+        <div class="center">
+
+            <div class="noticias-wraper-1">
+
+                <div style="background-image: url(https://img.freepik.com/fotos-gratis/esfera-azul-brilhante-segurada-por-mao-humana-gerada-por-ia_188544-41033.jpg);"
+                    class="noticia-destaque">
+                    <div class="noticia-destaque-single">
+                        <a style="text-decoration: none;" href="noticia.html">
+                            <h3>Tech News inaugura seu site!</h3>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="outras-noticias-1">
+                <div style="background-image: url(https://img.freepik.com/fotos-gratis/mulher-desfocada-de-frente-mostrando-seu-smartphone-com-tela-vazia_23-2148638130.jpg?size=626&ext=jpg&ga=GA1.1.720430701.1694815818&semt=sph);"
+                    class="outra-noticia-1-single">
+                    <h3>Lançamento de Telefone</h3>
+                </div>
+                <div style="background-image: url(https://www.meupositivo.com.br/doseujeito/wp-content/uploads/2021/05/processador-3.jpg);"
+                    class="outra-noticia-1-single">
+                    <h3>Como aumentar perfomance do seu processador</h3>
+                </div>
+                <div style="background-image: url(https://aiqon.com.br/blog/wp-content/uploads/2020/12/seguranca-web.jpg)";
+                    class="outra-noticia-1-single">
+                    <h3>Como proteger seu sistema operacional</h3>
+                </div>
+                <div style="background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1696283405)";
+                    class="outra-noticia-1-single">
+                    <h3>Counter Strike 2 é lançado ao público</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão de rolagem -->
+    <button id="scrollBtn" class="scroll-btn">&#8593;</button>
+
+    <div class="menu-toggle" id="mobile-menu">
+        ☰ Menu
+    </div>
+
+    <div class="menu-main" id="menu-main">
+        <a href="index.html">Home</a>
+        <a href="#">Noticias</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('caminho/para/imagem1.jpg');"></div>
+            <div class="swiper-slide" style="background-image: url(https://static.vecteezy.com/ti/fotos-gratis/t2/987338-empresario-lendo-noticias-em-digital-tablet-foto.jpg);"></div>
+            <!-- Adicione mais slides conforme necessário -->
+        </div>
+        <!-- Adicionar navegação do carrossel -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                // Configurações do Swiper
+                loop: true, // Se deseja que o carrossel seja em loop
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+    
+    
+
+
+    <script>
+        // Obter o botão de rolagem
+        var scrollBtn = document.getElementById("scrollBtn");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var mainMenu = document.getElementById("menu-main");
+
+        // Adicionar comportamento de rolagem suave ao clicar no botão
+        scrollBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0; // Para navegadores da web
+            document.documentElement.scrollTop = 0; // Para IE, Firefox, Safari
+        });
+
+        // Adicionar evento de clique ao botão de menu
+        mobileMenu.addEventListener("click", function () {
+            if (mainMenu.style.display === "flex") {
+                mainMenu.style.display = "none";
+            } else {
+                mainMenu.style.display = "flex";
+            }
+        });
+
+        // Mostrar o botão quando o usuário rolar para baixo 20 pixels da parte superior da página
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+    </script>
+
+
+</body>
+
+</html>

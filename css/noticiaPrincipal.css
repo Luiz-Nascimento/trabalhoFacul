@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    color: #333; /* Cor do texto padrão */
+}
+
+header {
+    background-color: #00549e;
+    padding: 10px 0;
+    color: white; /* Cor do texto no cabeçalho */
+}
+
+header h2 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.menu-main {
+    width: 100%;
+    background-color: #00549e;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+
+.menu-main a {
+    display: inline-block;
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-main a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    display: flex;
+    max-width: 1100px;
+    align-items: stretch;
+    margin: 0 auto;
+    padding: 0 2%;
+    flex-wrap: wrap;
+}
+
+.wrapper-header {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    font-size: 40px;
+    margin: 0;
+    color: white;
+}
+
+.site-description {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.site-description h3 {
+    color: #00549e;
+}

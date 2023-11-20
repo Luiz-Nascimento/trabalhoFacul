@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 
 </head>
@@ -20,10 +21,7 @@
                 <div class="logo">
                     <h2>Tech News</h2>
                 </div>
-                <div class="banner-ads">
-                    <h2><span style="font-size: 23px;">Tech News</span><br> <a style="text-decoration: none; color: white;"
-                            href="anuncio.html">Insira um anúncio aqui </a></h2>
-                </div>
+                
 
         </div>
     </header>
@@ -37,35 +35,11 @@
             <a href="contato.html">Contato</a>
         </div>
     </div>
-    <!-- Seção de Notícias -->
-    <section class="noticias-1">
-        <div class="center">
-            <div class="noticias-wraper-1">
-                <!-- Notícia Principal com Carrossel -->
-                <div class="noticia-destaque">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://images.pexels.com/photos/6335/man-coffee-cup-pen.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagem 1">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://images.pexels.com/photos/4387779/pexels-photo-4387779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagem 2">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://images.pexels.com/photos/1432674/pexels-photo-1432674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagem 3">
-                            </div>
-                            <!-- Adicione mais slides conforme necessário -->
-                        </div>
-                        <!-- Adicione a barra de navegação do carrossel se desejar -->
-                        <div class="swiper-pagination"></div>
-                        <!-- Adicione os botões de navegação se desejar -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    
-                </div>
-            </div>
-            
+    <div style="background-image: url(https://images.pexels.com/photos/4387779/pexels-photo-4387779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);" class="outra-noticia-1-single featured">
+        <h3>Notícia Maior</h3>
+    </div>
+    
+
             <!-- Outras Notícias -->
             <div class="outras-noticias-1">
                 <!-- ... (seu conteúdo de outras notícias aqui) ... -->
@@ -91,8 +65,6 @@
     </section>
     
    
-   
-
     <!-- Botão de rolagem -->
     <button id="scrollBtn" class="scroll-btn">&#8593;</button>
 
@@ -102,46 +74,6 @@
         <a href="sobre.html">Sobre</a>
         <a href="contato.html">Contato</a>
     </div>
-
-    <script>
-        // Obter o botão de rolagem
-        var scrollBtn = document.getElementById("scrollBtn");
-        var mobileMenu = document.getElementById("mobile-menu");
-        var mainMenu = document.getElementById("menu-main");
-
-        // Adicionar comportamento de rolagem suave ao clicar no botão
-        scrollBtn.addEventListener("click", function () {
-            document.body.scrollTop = 0; // Para navegadores da web
-            document.documentElement.scrollTop = 0; // Para IE, Firefox, Safari
-        });
-
-
-
-        // Mostrar o botão quando o usuário rolar para baixo 20 pixels da parte superior da página
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        };
-    </script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            // Configurações opcionais aqui
-            loop: true, // Para permitir o loop contínuo do carrossel
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-    
-    
 
 </body>
 
